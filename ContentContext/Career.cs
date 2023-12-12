@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace conceitosPOO.ContentContext
 {
-    public class Career
+    public class Career : Content
     {
+        public string Courses { get; set; }
     }
 }
