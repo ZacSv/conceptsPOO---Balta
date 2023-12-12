@@ -9,8 +9,10 @@ namespace conceitosPOO.ContentContext
     public class Content
     {
 
-        public Content()
+        public Content(string tittle, string url)
         {
+            Tittle = tittle;
+            Url = url;
             Id = Guid.NewGuid(); //Definindo por padrão a inicialização de um novo ID sempre que a classe for instanciada
         }
         public Guid Id { get; set; }

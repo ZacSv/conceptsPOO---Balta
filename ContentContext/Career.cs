@@ -8,6 +8,14 @@ namespace conceitosPOO.ContentContext
 {
     public class Career : Content
     {
-        public string Courses { get; set; }
+        public Career(string tittle, string url)
+            :base(tittle, url)
+        {
+            Items = new List<CareerItem>();    
+        }
+        public IList<CareerItem> Items { get; set; }
+        public int CoursesCount => Items.Count; //Expression body
+ 
     }
+
 }

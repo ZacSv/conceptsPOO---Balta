@@ -1,35 +1,28 @@
-﻿using System;
+﻿using conceitosPOO.ContentContext.Enums;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
+//Definição das propriedades e lógicas dos cursos
+
 namespace conceitosPOO.ContentContext
 {
     public class Course : Content
     {
-        public Course()
+        public Course(string tittle, string url) 
+            : base(tittle, url ) //Trazendo os parâmetros passados na instância do construtor base 
         {
             Modules = new List<Module>();
         }
         public string TagCourse { get; set; }
+        public double DurationInHours { get; set; }
+        public EContentLevel Level { get; set; }
         public IList<Module> Modules{ get; set; }
+        
 
-        public class Module
-        {
-            public Module()
-            {
-                Lectures = new List<Lecture>();
-            }
-            public int Order { get; set; }
-            public string Tittle { get; set; }
-            IList<Lecture> Lectures { get; set; }
-        }
 
-        public class Lecture
-        {
-            public int Order { get; set; }
-            public string Tittle { get; set; }
-        }
     }
-    }
+}
